@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace anihowdb\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

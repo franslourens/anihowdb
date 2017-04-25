@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'anihowdb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +103,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => env('APP_KEY', 'base64:Xi77+iwdk3m+TLKBxw++gFVoH2tLI6bAFCzaqE8q8qM='),
 
     'cipher' => 'AES-256-CBC',
 
@@ -122,7 +122,7 @@ return [
 
     'log' => env('APP_LOG', 'single'),
 
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    'log_level' => env('APP_LOG_LEVEL', 'error'),
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        anihowdb\Providers\AppServiceProvider::class,
+        anihowdb\Providers\AuthServiceProvider::class,
+        // anihowdb\Providers\BroadcastServiceProvider::class,
+        anihowdb\Providers\EventServiceProvider::class,
+        anihowdb\Providers\RouteServiceProvider::class,
 
     ],
 

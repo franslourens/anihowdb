@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('welcome', ['name' => 'Frans']);
+})->middleware('auth');
+
+Route::resource('media', 'MediaController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
