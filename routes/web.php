@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', ['name' => 'Frans']);
-})->middleware('auth');
+Route::group(['middleware' => 'auth'], function()
+{
+    Route::get('/', function () {
+        return view('welcome', ['name' => 'Frans']);
+    });
 
-Route::resource('media', 'MediaController');
+    Route::resource('admin/media', 'MediaController');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

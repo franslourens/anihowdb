@@ -3,6 +3,7 @@
 namespace anihowdb\Http\Controllers;
 
 use Illuminate\Http\Request;
+use anihowdb\Media;
 
 class MediaController extends Controller
 {
@@ -14,7 +15,8 @@ class MediaController extends Controller
     public function index()
     {
         //
-        return view('media.index', ['name' => 'Frans']);
+        $media = Media::all();
+        return view('media.index', ['media' => $media]);
     }
 
     /**
@@ -25,6 +27,7 @@ class MediaController extends Controller
     public function create()
     {
         //
+        return view('media.create');
     }
 
     /**
@@ -35,7 +38,18 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+        ]);
+
+        Media::create($request->all());
+
+        return redirect()->route('media.index')
+                         ->with('success','Media created successfully');
     }
 
     /**
@@ -46,7 +60,8 @@ class MediaController extends Controller
      */
     public function show($id)
     {
-        //
+      $media = Media::find($id);
+      return view('media.show', array('media' => $media));
     }
 
     /**

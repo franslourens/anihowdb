@@ -8,5 +8,8 @@
 @stop
 
 @section('content')
-    Test
+    @foreach ( $media as $m )
+            {{ $m->title }}
+            {{ $m->description }}
+    @endforeach
 @stop
