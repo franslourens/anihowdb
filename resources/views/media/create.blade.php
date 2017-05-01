@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.perfectum')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -20,7 +20,7 @@
             </ul>
         </div>
     @endif
-        {!! Form::open(['url' => 'media']) !!}
+        {!! Form::open(['url' => 'admin/media']) !!}
             @include('media.form')
          {!! Form::close() !!}
 @endsection
