@@ -168,8 +168,7 @@ function widthFunctions( e ) {
     var winWidth = $(window).width();
 
 	if (winHeight) {
-		
-		$("#content").css("min-height",winHeight);
+		$//("#content").css("min-height",winHeight);
 		
 	}
     

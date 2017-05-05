@@ -31,7 +31,7 @@
 	<link href="{{asset('assets/css/bootstrap-colorpicker.css')}}" rel="stylesheet">		
 	
 	<!-- main style -->
-	<link href="{{asset('assets/css/style.min.css')}}" rel="stylesheet">
+	<link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
 
 	<!--[if lt IE 9 ]>
 		<link href="{{asset('assets/css/style-ie.css')}}" rel="stylesheet">
@@ -95,7 +95,7 @@
 		
 		<div class="clearfix"></div>
 		
-		<footer>
+		<footer class="col-sm-12" style="position:fixed; bottom: 0;">
 			<p>
 				<span style="text-align:left;float:left">&copy; 2013 creativeLabs. <a href="http://bootstrapmaster.com">Admin Templates</a> by BootstrapMaster</span>
 				<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://bootstrapmaster.com/demo/perfectum/" alt="Bootstrap Admin Templates">Perfectum Dashboard</a></span>
@@ -168,7 +168,7 @@
 	
 	<!-- theme scripts -->
 	<script src="{{asset('assets/js/default.min.js')}}"></script>
-	<script src="{{asset('assets/js/core.min.js')}}"></script>
+	<script src="{{asset('assets/js/uncompressed/core.js')}}"></script>
 	
 	<!-- inline scripts related to this page
 	<script src="{{asset('assets/js/pages/index.js')}}"></script>

@@ -38,57 +38,5 @@
 		</div>
 	</div><!--/col-->
 </div><!--/row-->
-
-<div class="row">
-	<div class="col-lg-12">
-		<div class="box">
-			<div class="box-header">
-
-			</div>
-			<div class="box-content">
-
-			</div>
-		</div>
-	</div><!--/col-->
-</div><!--/row-->
-
-<div class="row">
-	<div class="col-lg-12">
-		<div class="box">
-			<div class="box-header">
-
-			</div>
-			<div class="box-content">
-
-			</div>
-		</div>
-	</div><!--/col-->
-</div><!--/row-->
-
-<div class="row">
-	<div class="col-lg-12">
-		<div class="box">
-			<div class="box-header">
-
-			</div>
-			<div class="box-content">
-
-			</div>
-		</div>
-	</div><!--/col-->
-</div><!--/row-->
-
-<div class="row">
-	<div class="col-lg-12">
-		<div class="box">
-			<div class="box-header">
-
-			</div>
-			<div class="box-content">
-
-			</div>
-		</div>
-	</div><!--/col-->
-</div><!--/row-->
 @stop
 
