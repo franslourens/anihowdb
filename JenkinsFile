@@ -1,0 +1,21 @@
+node ("anihowdb") 
+{
+  try
+  {
+    stage "Git"
+        
+    stage "Configure"
+
+  	stage "Test"                
+    
+	  stage ("Compress") 
+    {
+		
+	  }
+	
+    stage "Package"
+  
+
+    stage "Ship"
+  }
+}
