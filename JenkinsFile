@@ -1,18 +1,18 @@
 node ("anihowdb-web1") 
 {
     stage "Git"
-     dir("/var/www/public") {
+     dir("/var/www/anihowdb") {
             checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', trackingSubmodules: false]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'fd85a2f2-66d8-470f-99cc-8df2fed05f10', url: 'https://github.com/franslourens/anihowdb.git']]]) 
      }
         
     stage "Configure"
 
-  	stage "Test"                
+    stage "Test"                
     
-	  stage ("Compress") 
+    stage ("Compress") 
     {
-		
-	  }
+    
+    		}
 	
     stage "Package"
   
