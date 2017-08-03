@@ -12,7 +12,7 @@ node ("anihowdb-web1")
     stage ("Compress") 
     {
     
-    		}
+    }
 	
     stage "Package"
   
