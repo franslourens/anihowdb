@@ -50,7 +50,7 @@
                 <div class="clearfix"></div>
         </form>
         <hr>
-        <h3>Forgot Password?</h3>
+        <h3>Forgot Password??</h3>
         <p>
             No problem, <a href="{{ route('password.request') }}">click here</a> to get a new password.
         </p>	
