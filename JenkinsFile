@@ -3,7 +3,7 @@ node ("anihowdb-web1")
     try
     {
     	stage "Git"
-    	dir("/var/www/anihowdb") {
+    	dir("/var/www/html/anihowdb") {
             checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', trackingSubmodules: false]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'fd85a2f2-66d8-470f-99cc-8df2fed05f10', url: 'https://github.com/franslourens/anihowdb.git']]]) 
      	}
         
