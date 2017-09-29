@@ -53,7 +53,8 @@
         <h3>Forgot Password?</h3>
         <p>
             No problem, <a href="{{ route('password.request') }}">click here</a> to get a new password.
-        </p>	
+        </p>
+        <p>Server on <?php echo $_SERVER["SERVER_ADDR"]?></p>
     </div><!--/col-->
 </div><!--/fluid-row-->
 @endsection
