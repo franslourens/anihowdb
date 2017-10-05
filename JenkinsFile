@@ -17,12 +17,15 @@ try
 stage "Configure"
 
 stage "Test"           
+	node ("anihowdb-web1") 
+	{
 dir("/var/www/html/anihowdb") {
 try {
 	sh " ./vendor/bin/phpunit"
     } catch(e) {		
 	throw e
     }
+}
 }
 stage ("Compress") 
 {
