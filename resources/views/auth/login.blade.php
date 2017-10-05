@@ -54,7 +54,7 @@
         <p>
             No problem, <a href="{{ route('password.request') }}">click here</a> to get a new password.
         </p>
-        <p>Server on <?php echo $_SERVER["SERVER_ADDR"]?></p>
+        <p>Server on <?php echo $_SERVER["SERVER_ADDR"]?> published by Jenkins</p>
     </div><!--/col-->
 </div><!--/fluid-row-->
 @endsection
