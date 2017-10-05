@@ -1,27 +1,34 @@
-node ("anihowdb-web1" | "anihowdb-web2") 
+try
 {
-    try
-    {
-    	stage "Git"
-    	dir("/var/www/html/anihowdb") {
-            checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', trackingSubmodules: false]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'fd85a2f2-66d8-470f-99cc-8df2fed05f10', url: 'https://github.com/franslourens/anihowdb.git']]]) 
-     	}
-        
-    	stage "Configure"
+	stage "Git"
+	node ("anihowdb-web1") 
+	{
+		dir("/var/www/html/anihowdb") {
+	    		checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', trackingSubmodules: false]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'fd85a2f2-66d8-470f-99cc-8df2fed05f10', url: 'https://github.com/franslourens/anihowdb.git']]]) 
+		}
+	}
+	node ("anihowdb-web2") 
+	{
+		dir("/var/www/html/anihowdb") {
+	    		checkout([$class: 'GitSCM', branches: [[name: "master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SubmoduleOption', disableSubmodules: false, parentCredentials: true, recursiveSubmodules: true, reference: '', trackingSubmodules: false]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'fd85a2f2-66d8-470f-99cc-8df2fed05f10', url: 'https://github.com/franslourens/anihowdb.git']]]) 
+		}
+	}
 
-    	stage "Test"                
-    
-    	stage ("Compress") 
-    	{
-    
-    	}
-	
-    	stage "Package"
-  
-    	stage "Ship"
-   }
-   catch(e) 
-   {
-        throw e
-   } 
+stage "Configure"
+
+stage "Test"                
+
+stage ("Compress") 
+{
+
 }
+
+stage "Package"
+
+stage "Ship"
+}
+catch(e) 
+{
+throw e
+} 
+
