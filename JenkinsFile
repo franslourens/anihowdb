@@ -16,8 +16,14 @@ try
 
 stage "Configure"
 
-stage "Test"                
-
+stage "Test"           
+dir("/var/www/html/anihowdb") {
+try {
+	sh " ./vendor/bin/phpunit"
+    } catch(e) {		
+	throw e
+    }
+}
 stage ("Compress") 
 {
 
