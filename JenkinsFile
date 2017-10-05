@@ -1,4 +1,4 @@
-node ("anihowdb-web1" || "anihowdb-web2") 
+node ("anihowdb-web1" | "anihowdb-web2") 
 {
     try
     {
