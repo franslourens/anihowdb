@@ -21,7 +21,7 @@ stage "Test"
 	{
 dir("/var/www/html/anihowdb") {
 try {
-	sh " ./vendor/bin/phpunit"
+	sh " ./vendor/bin/phpunit --debug"
     } catch(e) {		
 	throw e
     }
